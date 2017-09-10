@@ -65,7 +65,8 @@ syn match purescriptImportParams "hiding" contained
 " Function declaration
 syn region purescriptFunctionDecl excludenl start="^\z(\s*\)\(foreign\s\+import\_s\+\)\?[_a-z]\(\w\|\'\)*\_s\{-}\(::\|∷\)" end="^\z1\=\S"me=s-1,re=s-1 keepend
   \ contains=purescriptFunctionDeclStart,purescriptForall,purescriptOperatorType,purescriptOperatorTypeSig,purescriptType,purescriptTypeVar,purescriptDelimiter,@purescriptComment
-syn match purescriptFunctionDeclStart "^\s*\(foreign\s\+import\_s\+\)\?\([_a-z]\(\w\|\'\)*\)\_s\{-}\(::\|∷\)" contained
+"syn match purescriptFunctionDeclStart "^\s*\(foreign\s\+import\_s\+\)\?\([_a-z]\(\w\|\'\)*\)\_s\{-}\(::\|∷\)" contained
+syn match purescriptFunctionDeclStart "^\s*\(foreign\s\+import\_s\+\)\?\([_a-z]\(\w\|\'\)*\)\_s\{}\(::\|∷\)" contained
   \ contains=purescriptImportKeyword,purescriptFunction,purescriptOperatorType
 syn keyword purescriptForall forall
 syn match purescriptForall "∀"
